@@ -21,17 +21,7 @@ const devConfig = {
     // 配置代理
     proxy: {}
   },
-  // 寻找loader时，指定从以下文件中找
-  resolveLoader: {
-    modules: ['node_modeles', '../loaders']
-  },
   module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        use: 'vue-loader'
-      }
-    ]
   },
   plugins: [
     // 开启webpack热更新功能
