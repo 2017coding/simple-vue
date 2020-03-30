@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require('path')
+// const vueLoaderConfig = require('./vue-loader.conf')
 
 module.exports = {
   entry: {
@@ -14,7 +15,10 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          outputPath: 'vue/'
+        }
       }
     ]
   },
